@@ -1,0 +1,3 @@
+[submodule "signalProduction"]
+	path = signalProduction
+	url = https://github.com/aloeliger/signalProduction.git
