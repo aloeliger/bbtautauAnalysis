@@ -4,14 +4,14 @@
 #script for setting up the necessary CMSSW releases and releases for signal production 
 #and hopefully eventually for complete analysis chains
 
-cmsrel CMSSW_10_6_20
+scram pro CMSSW CMSSW_10_6_20
 cd CMSSW_10_6_20/src/
 cmsenv
 git cms-init
 
 cd ../../
 
-cmsrel CMSSW_8_0_33_UL
+scram pro CMSSW CMSSW_8_0_33_UL
 cd CMSSW_8_0_33_UL/src/
 cmsenv
 git cms-init
@@ -24,7 +24,6 @@ git cms-addpkg Configuration/Generator
 scram b -j 8
 cd ../../
 
-git clone https://github.com/aloeliger/signalProduction.git
 mkdir CMSSW_10_6_20/src/signalProductionWorkspace
 cp -r signalProduction/python/ CMSSW_10_6_20/src/signalProductionWorkspace/
 cp signalProduction/python/2016/generator_fragment/bbtautau_fragment_2016.py CMSSW_10_6_20/src/Configuration/Generator/python/
