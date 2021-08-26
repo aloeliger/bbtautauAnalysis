@@ -34,7 +34,7 @@ cp -r signalProduction/python/ CMSSW_8_0_33_UL/src/signalProductionWorkspace/
 cd CMSSW_10_6_25/src/
 #checkout out some outher useful things
 git cms-addpkg PhysicsTools/NanoAOD/
-git clone git@github.com:aloeliger/bbtautauAnalysisScripts.git
+git clone --recursive git@github.com:aloeliger/bbtautauAnalysisScripts.git
 cmsenv
 scram b -j 8
 cd ../../
