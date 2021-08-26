@@ -4,8 +4,8 @@
 #script for setting up the necessary CMSSW releases and releases for signal production 
 #and hopefully eventually for complete analysis chains
 
-scram pro CMSSW CMSSW_10_6_20
-cd CMSSW_10_6_20/src/
+scram pro CMSSW CMSSW_10_6_25
+cd CMSSW_10_6_25/src/
 cmsenv
 git cms-init
 
