@@ -35,6 +35,7 @@ cd CMSSW_10_6_25/src/
 #checkout out some outher useful things
 git cms-addpkg PhysicsTools/NanoAOD/
 git clone --recursive git@github.com:aloeliger/bbtautauAnalysisScripts.git
+git clone https://github.com/cms-nanoAOD/nanoAOD-tools.git PhysicsTools/NanoAODTools
 cmsenv
 scram b -j 8
 cd ../../
