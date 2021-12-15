@@ -18,6 +18,13 @@ git cms-init
 
 cd ../../
 
+scram pro CMSSW CMSSW_10_2_13
+cd CMSSW_10_2_13/src/
+cmsenv
+git cms-init
+
+cd ../../
+
 cd CMSSW_10_6_25/src/
 cmsenv
 git cms-addpkg Configuration/Generator
@@ -33,14 +40,21 @@ cp -r signalProduction/python/ CMSSW_8_0_33_UL/src/signalProductionWorkspace/
 
 cd CMSSW_10_6_25/src/
 #checkout out some outher useful things
+cmsenv
 git cms-addpkg PhysicsTools/NanoAOD/
 git clone --recursive git@github.com:aloeliger/bbtautauAnalysisScripts.git
 git clone https://github.com/cms-nanoAOD/nanoAOD-tools.git PhysicsTools/NanoAODTools
-cmsenv
 scram b -j 8
 cd ../../
 
 cd CMSSW_8_0_33_UL/src/
 cmsenv
+scram b -j 8
+cd ../../
+
+cd CMSSW_10_2_13/src/
+cmsenv
+git clone https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit.git HiggsAnalysis/CombinedLimit
+git clone https://github.com/cms-analysis/CombineHarvester.git CombineHarvester
 scram b -j 8
 cd ../../
