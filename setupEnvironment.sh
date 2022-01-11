@@ -43,9 +43,10 @@ cd CMSSW_10_6_25/src/
 cmsenv
 git cms-addpkg PhysicsTools/NanoAOD/
 git clone --recursive git@github.com:aloeliger/bbtautauAnalysisScripts.git
-git clone https://github.com/cms-nanoAOD/nanoAOD-tools.git PhysicsTools/NanoAODTools
+#git clone https://github.com/cms-nanoAOD/nanoAOD-tools.git PhysicsTools/NanoAODTools
 git clone https://github.com/SVfit/ClassicSVfit TauAnalysis/ClassicSVfit -b fastMTT_19_02_2019
 git clone https://github.com/SVfit/SVfitTF TauAnalysis/SVfitTF
+git clone git@github.com:aloeliger/nanoAOD-tools.git PhysicsTools/NanoAODTools
 scram b -j 8
 cd ../../
 
